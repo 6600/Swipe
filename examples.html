@@ -1,0 +1,134 @@
+<!DOCTYPE HTML> 
+<html>
+<head>
+<title>Swipe</title>
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/> 
+<style>
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+body {
+  -webkit-text-size-adjust:none;
+  font-family:sans-serif;
+  min-height:416px;
+}
+h1 {
+  font-size:33px;
+  margin:50px 0 15px;
+  text-align:center;
+  color:#212121;
+}
+h2 {
+  font-size:14px;
+  font-weight:bold;
+  color:#3c3c3c;
+  margin:20px 10px 10px;
+}
+small {
+  margin:0 10px 30px;
+  display:block;
+  font-size:12px;
+}
+a {
+  margin:0 0 0 10px;
+  font-size:12px;
+  color:#3c3c3c;
+}
+
+
+html, body {
+  background: #f3f3f3;
+}
+
+#console {
+  font-size: 12px;
+  font-family:"Inconsolata", "Monaco", "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  color: #999;
+  line-height: 18px;
+  margin-top: 20px;
+  max-height: 150px;
+  overflow: auto;
+}
+
+#mySwipe div b {
+  display:block;
+  font-weight:bold;
+  color:#14ADE5;
+  font-size:20px;
+  text-align:center;
+  margin:10px;
+  padding:100px 10px;
+  box-shadow: 0 1px #EBEBEB;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid;
+  border-color: #E5E5E5 #D3D3D3 #B9C1C6;
+}
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>Swipe</h1>
+
+<div id='mySwipe' style='max-width:500px;margin:0 auto' class='swipe'>
+  <div class='swipe-wrap'>
+    <div><b>0</b></div>
+    <div><b>1</b></div>
+    <div><b>2</b></div>
+  </div>
+</div>
+
+
+
+<div style='text-align:center;padding-top:20px;'>
+  
+  <button onclick='mySwipe.prev()'>prev</button> 
+  <button onclick='mySwipe.next()'>next</button>
+
+</div>
+
+
+<script src='swipe.js'></script>
+<script>
+var elem = document.getElementById('mySwipe');
+window.mySwipe = Swipe(elem, {
+  // 开始滚动的位置
+  // startSlide: 4, 
+  // 动画滚动的间隔（秒数）
+  // auto: 3000,
+  // 创建一个无限的循环（当滑动到所有动画结束时是否循环滑动）
+  // continuous: true,
+  // 当滚动滚动条时是否停止幻灯片滚动
+  // disableScroll: true,
+  // 是否停止事件冒泡
+  // stopPropagation: true,
+  // 幻灯片运行中的回调函数
+  // callback: function(index, element) {},
+  // 动画运行结束的回调函数
+  // transitionEnd: function(index, element) {}
+});
+
+</script>
