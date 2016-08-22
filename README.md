@@ -1,8 +1,7 @@
 # Swipe
 移动端触摸滑动插件
 
-原文链接：http://caibaojian.com/swipe.html
-设置选项
+设置选项:
 
 startSlide Integer (default:0) - 开始滚动的位置
 speed Integer (default:300) - 动画滚动的间隔（秒数）
